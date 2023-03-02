@@ -16,6 +16,11 @@ pub fn build(b: *std.build.Builder) void {
     const mode = b.standardReleaseOptions();
 
     const lib = b.addSharedLibrary("skse-skyrim-mod", "src/main.cpp", b.version(0, 0, 1));
+    lib.addCSourceFiles(&.{
+        "vendor/common/IDebugLog.cpp",
+        "vendor/common/IFileStream.cpp",
+        "vendor/common/ITypes.cpp",
+    }, &.{});
     lib.linkLibCpp();
     lib.addIncludePath("vendor");
     lib.setTarget(target);

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <assert.h>
+
 #include "skse/ScaleformAPI.h"
 #include "skse/ScaleformTypes.h"
 #include "skse/Utilities.h"
@@ -229,6 +231,8 @@ extern FunctionHandlerCache g_functionHandlerCache;
 template <typename T>
 void RegisterFunction(GFxValue * dst, GFxMovieView * movie, const char * name)
 {
+	assert(false);
+	/*
 	// either allocate the object or retrieve an existing instance from the cache
 	GFxFunctionHandler	* fn = NULL;
 
@@ -253,6 +257,7 @@ void RegisterFunction(GFxValue * dst, GFxMovieView * movie, const char * name)
 
 	// register it
 	dst->SetMember(name, &fnValue);
+	*/
 }
 
 // 04

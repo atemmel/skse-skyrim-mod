@@ -1,3 +1,8 @@
+#include <string>
+#include <windows.h>
+#include "common/IErrors.h"
+#include "common/ITypes.h"
+#include "common/IDebugLog.h"
 #include "skse/PluginAPI.h"
 #include "skse/skse_version.h"
 #include "skse/SafeWrite.h"
